@@ -16,6 +16,7 @@ header {
   width: 100%;
   top: 0;
   left: 0;
+  z-index: 999;
 }
 
 nav ul {
@@ -133,6 +134,23 @@ footer {
 .card p {
   margin: 5px 0;
   color: #666;
+}
+
+.validation-icon {
+  font-size: 1.2em;
+  margin-left: 5px;
+}
+.validation-message p {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.alert {
+  color: red;
+}
+
+.success {
+  color: green;
 }
 
 @media screen and (max-width: 768px) {

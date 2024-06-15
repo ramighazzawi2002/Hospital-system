@@ -23,12 +23,75 @@
         <form id="patientForm">
           <label for="fullName">Full Name:</label>
           <input type="text" id="fullName" name="fullName" required />
+          <div class="validation-message" id="fullNameMessage">
+            <!-- <span class="icon" id="fullNameIcon"
+              ><ion-icon name="checkmark-circle-outline"></ion-icon
+            ></span> -->
+            <p>
+              <span class="icon" id="fullNameIcon"
+                ><ion-icon
+                  name="alert-circle-outline"
+                  class="validation-icon alert"
+                ></ion-icon
+              ></span>
+              No White Spaces
+            </p>
+          </div>
 
           <label for="password">Password:</label>
           <input type="password" id="password" name="password" required />
+          <div class="validation-message" id="passwordMessage">
+            <p>
+              <span class="icon" id="fullNameIcon"
+                ><ion-icon
+                  name="alert-circle-outline"
+                  class="validation-icon alert"
+                ></ion-icon
+              ></span>
+              More than 8 characters
+            </p>
+            <p>
+              <span class="icon" id="fullNameIcon"
+                ><ion-icon
+                  name="alert-circle-outline"
+                  class="validation-icon alert"
+                ></ion-icon
+              ></span>
+              With at least 1 number
+            </p>
+            <p>
+              <span class="icon" id="fullNameIcon"
+                ><ion-icon
+                  name="alert-circle-outline"
+                  class="validation-icon alert"
+                ></ion-icon
+              ></span>
+              With at least 1 uppercase
+            </p>
+            <p>
+              <span class="icon" id="fullNameIcon"
+                ><ion-icon
+                  name="alert-circle-outline"
+                  class="validation-icon alert"
+                ></ion-icon
+              ></span>
+              With at least 1 special character
+            </p>
+          </div>
 
           <label for="dob">Date of Birth:</label>
-          <input type="date" id="dob" name="dob" required />
+          <input type="text" id="dob" name="dob" required />
+          <div class="validation-message" id="dobMessage">
+            <p>
+              <span class="icon" id="fullNameIcon"
+                ><ion-icon
+                  name="alert-circle-outline"
+                  class="validation-icon alert"
+                ></ion-icon
+              ></span>
+              Format is YYYY-MM-DD
+            </p>
+          </div>
 
           <label for="gender">Gender:</label>
           <select id="gender" name="gender" required>
@@ -38,9 +101,40 @@
 
           <label for="phone">Phone Number:</label>
           <input type="tel" id="phone" name="phone" required />
-
+          <div class="validation-message" id="phoneMessage">
+            <p>
+              <span class="icon" id="fullNameIcon"
+                ><ion-icon
+                  name="alert-circle-outline"
+                  class="validation-icon alert"
+                ></ion-icon
+              ></span>
+              10 digits
+            </p>
+            <p>
+              <span class="icon" id="fullNameIcon"
+                ><ion-icon
+                  name="alert-circle-outline"
+                  class="validation-icon alert"
+                ></ion-icon
+              ></span>
+              starts with 07
+            </p>
+          </div>
+          <label for="email">Email: </label>
+          <input type="email" id="email" name="email" required />
+          <div class="validation-message" id="emailMessage">
+            <p>
+              <span class="icon" id="fullNameIcon"
+                ><ion-icon
+                  name="alert-circle-outline"
+                  class="validation-icon alert"
+                ></ion-icon
+              ></span>
+              Valid email address
+            </p>
+          </div>
           <label for="diseases">Chronic Diseases:</label>
-
           <select id="diseases" name="diseases" required>
             <option value="hypertension">Hypertension</option>
             <option value="heart disease">Heart Disease</option>
@@ -58,7 +152,14 @@
     <footer>
       <p>&copy; 2024 Hospital System. All rights reserved.</p>
     </footer>
-
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
     <script src="app.js"></script>
   </body>
 </html>
